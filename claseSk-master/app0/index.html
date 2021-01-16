@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es"/>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Pagina Clase SK</title>
+		<meta http-equiv="x-ua-compatible" content="ie-edge"/>
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,shrink-to-fit=no,maximum-scale=3,minimal-ui"/>
+		<meta name="description" content="mi pagina web clase SK"/>
+		<meta name="application-name" content="website"/>
+		<link rel="alternate" hreflang="es" href="https://www.digitai.co/" />
+		<link rel="stylesheet" href="/shell/css/wssk.css"/>
+		<link rel="icon" href="/shell/img/ico/favicon.ico"/>
+	</head>
+
+	<body class="contenedor">
+
+		<header class="header-c">
+			<div class="header-logo">
+				<img src="/shell/img/logo/logo.png" alt="" class="logo-top"/>	
+			</div>
+			<div class="header-menu">
+				<div class="hm-1"> <a href="#"> Home </a> </div>
+				<div class="hm-2"> <a href="#"> Juegos </a> </div>
+				<div class="hm-3"> <a href="#"> Twitch </a> </div>
+				<div class="hm-4"> <a href="#"> Valve </a> </div>
+			</div>
+			<div class="header-mham">
+				<img src="/shell/img/ico/menu.svg" alt="" class="menuham" id="btnMh" />
+			</div>
+		</header>
+
+		<main class="cnt">
+			<div class="cnt-titulo">
+				<h1>Plataforma Comunicaciones Web</h1>
+			</div>
+			<div class="cnt-contenido">
+				<div class="cnt-11">
+					<table>
+						<thead>
+							<tr>
+							</tr>
+						</thead>
+						<tbody id="dataEstadoApp"></tbody>
+					</table>
+				</div>
+				<div class="cnt-12">
+				<video autoplay playsinline class="cnt-12" id="dVideo1">Video Stream no disponible!</video>
+				<video autoplay playsinline class="cnt-13" id="dVideo2">Video Stream no disponible!</video>
+				</div>
+				<div class="cnt-13">
+					<button id="btnSta">Iniciar</button>
+					<button id="btnCall">Llamar</button>
+					<button id="btnColgar">Colgar</button>
+				</div>
+
+				<div class="cnt-14" id="divData"></div>
+			</div>
+			<div class="cnt-fondo">Hola Mundo test div!</div>
+
+		</main>
+
+		<footer class="fot">
+			<div class="f-version">1.0.0</div>
+			<div class="footer-1">Privacidad</div>
+			<div class="footer-2">Disclaimer</div>
+			<div class="footer-3">Inicio</div>
+		</footer>
+		
+		<!-- MENU HAMBURGUESA -->
+		<div id="divMenuham" class="menu-ham">
+			<div class="mh-item menuAccion" id="menSb0" data-url="/">Inicio</div>
+			<div class="mh-item menuAccion" id="menSb2" data-url="/contacto-digitai.html">Contacto</div>
+			<div class="mh-item menuAccion" id="menSb3" data-url="/equipo-digitai.html">Nosotros</div>
+		</div>
+
+		<script src="/src/js/index.js"></script>
+		<script src="/src/js/webrtc.js"></script>
+	</body>
+</html> 
+

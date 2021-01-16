@@ -1,0 +1,324 @@
+html, body {
+	font-family: Arial;
+	color: #808080;
+	font-size: 0.90em;
+	margin: 0 auto;
+	min-height:100vh;
+	min-height: -webkit-fill-available;
+	width:100%;
+}
+a {
+	text-decoration:none;
+	color: white;
+}
+a:hover {
+	color: red;
+}
+img {
+	max-width:100%;
+	height:auto;
+}
+video {
+	/*filter: hue-rotate(100deg) saturate(200%);*/
+	max-width: 100%;
+	width:320px;
+}
+/* [GRILLA] */
+.contenedor {
+	display: grid;
+	place-items:stretch center;
+	grid-template-columns:1fr;
+	grid-template-rows: 55px auto 25px;
+	grid-template-areas:
+	"head"
+	"cont"
+	"foot";
+}
+.header-c {
+	display:grid;
+	grid-area: head;
+	background-color: gray;
+	place-items:center center;
+	position:sticky;
+	width:100%;
+	top:0;
+	grid-template-columns:150px auto;
+	grid-template-areas:
+	"hlogo hmenu";
+}
+.header-logo {
+	grid-area:hlogo;
+}
+.header-menu {
+	display:grid;
+	color:white;
+	grid-area: hmenu;
+	font-size:0.75em;
+	width:100%;
+	place-items:center center;
+	grid-template-columns:repeat(4 1fr);
+	grid-template-areas:
+	"hm1 hm2 hm3 hm4";
+}
+.h-m1 {
+	grid-area:hm1;
+}
+.h-m2 {
+	grid-area:hm2;
+}
+.h-m3 {
+	grid-area:hm3;
+}
+.h-m4 {
+	grid-area:hm4;
+}
+.header-mham {
+	grid-area:hmenuham;
+	display:none;
+}
+.cnt {
+	display: grid;
+	grid-area:cont;
+	place-items:stretch center;
+	min-height:92vh;
+	grid-template-columns:1fr;
+	grid-template-rows: minmax(min-content, max-content) auto minmax(min-content,max-content);
+	grid-template-areas:
+	"ctit"
+	"ccont"
+	"cfondo";
+}
+.cnt-titulo {
+	grid-area:ctit;
+}
+.cnt-contenido {
+	display: grid;
+	grid-area:ccont;
+	place-items:stretch center;
+	grid-template-columns:1fr;
+	grid-template-rows: repeat(3, minmax(min-height,max-height));
+	grid-template-areas:
+	"c11"
+	"c12"
+	"c13"
+}
+.cnt-3x5 {
+	display: grid;
+	grid-area:grilla-3x5;
+	place-items:stretch center;
+	grid-template-columns:repeat(3, minmax(min-width,max-width));
+	grid-template-rows: repeat(5, minmax(min-height,max-height));
+	grid-template-areas:
+	"c11 c21 c31"
+	"c12 c22 c32"
+	"c13 c23 c33"
+	"c14 c24 c34"
+	"c15 c25 c35";
+}
+
+.cnt-1x8 {
+	display: grid;
+	grid-area:grilla-1x8;
+	place-items:stretch center;
+	grid-template-columns:1fr;
+	grid-template-rows: repeat(8, 1fr);
+	grid-template-areas:
+	"c11"
+	"c12"
+	"c13"
+	"c14"
+	"c15"
+	"c16"
+	"c17"
+	"c18";
+}
+.cnt-c11 {
+	grid-area: c11;
+}
+.cnt-12 {
+	grid-area:c12;
+}
+.cnt-13 {
+	grid-area:c13;
+}
+.cnt-14 {
+	grid-area:c14;
+}
+.cnt-15 {
+	grid-area:c15;
+}
+.cnt-21 {
+	grid-area:c21;
+}
+.cnt-22 {
+	grid-area:c22;
+}
+.cnt-23 {
+	grid-area:c23;
+}
+.cnt-24 {
+	grid-area:c24;
+}
+.cnt-25 {
+	grid-area:c25;
+}
+.cnt-31 {
+	grid-area:c31;
+}
+.cnt-32 {
+	grid-area:c32;
+}
+.cnt-33 {
+	grid-area:c33;
+}
+.cnt-34 {
+	grid-area:c34;
+}
+.cnt-35 {
+	grid-area:c35;
+}
+.cnt-fondo {
+	grid-area:cfondo;
+}
+
+.fot {
+	display:grid;
+	grid-area:foot;
+	position:sticky;
+	bottom:0;
+	width:100%;
+	font-size:0.65em;
+	color:white;
+	background-color:gray;
+	place-items:center center;
+	grid-template-columns: 150px repeat(3 1fr);
+	grid-template-areas: "version f1 f2 f3";
+}
+.f-version {
+	grid-area:version;
+}
+.footer-1 {
+	grid-area:f1;
+}
+.footer-2 {
+	grid-area:f2;
+}
+.footer-3 {
+	grid-area:f3;
+}
+
+/* [IMAGENES] */
+.logo-top {
+	width:60px;
+}
+.avatar-list {
+	width:30px;
+	height:30px;
+	border-radius: 50%;
+}
+
+/* // MENU HAMBURGUESA */
+.menu-ham {
+	width:0;
+	position:fixed;
+	z-index:6;
+	max-height:100%;
+	right:0;
+	top:45px;
+	margin:auto;
+	background-color: steelblue;
+	color:white;
+	transition:0.5s;
+	border-radius:6% 0% 0% 6%;
+}
+.mh-item  {
+	padding:8px 16px 8px 28px;
+}
+.mh-item:hover {
+	background-color: gainsboro;
+	color:gray;
+}
+
+
+/* [ TABLAS ]*/
+table {
+	table-layout:fixed;
+	width:100%;
+	border-collapse:collapse;
+	border:2px solid gray;
+}
+th td {
+	padding:20px;
+}
+th {
+	letter-spacing: 2px;
+}
+
+td {
+	letter-spacing: 1px;
+}
+
+tbody td {
+	text-align: center;
+}
+
+.celda {
+	border:1px solid gray;
+	padding: 6px;
+}
+
+
+/* [TITULOS] */
+
+
+/* [MEDIA QUERIES ] */
+@media (min-width:150px) and (max-width: 900px) {
+	.header-c {
+		grid-template-columns: 1.5fr 0.1fr;
+		grid-template-areas:
+		"hlogo hmenuham";
+	}
+	.header-menu {
+		display:none;
+	}
+	.header-mham {
+		display:block;
+	}
+	.fot {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"f2";
+	}
+	.f-version {
+		display:none;
+	}
+	.footer-1 {
+		display:none;
+	}
+	.footer-3 {
+		display:none;
+	}
+
+	.cnt-3x5 {
+		grid-template-columns:1fr;
+		grid-template-rows: repeat(15, 1fr);
+		grid-template-areas:
+		"c11"
+		"c21"
+		"c31"
+		"c12"
+		"c22"
+		"c32"
+		"c13"
+		"c23" 
+		"c33"
+		"c14"
+		"c24"
+		"c34"
+		"c15" 
+		"c25"
+		"c35";
+	}
+
+
+}
