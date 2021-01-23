@@ -25,7 +25,7 @@ a {
 	overflow:scroll;
 	height:100vh;
 	width:100%;
-	place-items:start center;
+	place-items:center center;
 	grid-template-columns:120px 1fr;
 	grid-template-rows:60px 1fr 120px;
 	grid-template-areas:
@@ -188,6 +188,44 @@ a {
 }
 .g-c4r4 {
 	grid-area:c4r4;
+}
+/* [ CARDS ] */
+.catalogo {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: start;
+}
+.item > section {
+	border: 1px solid gray;
+	padding:6px;
+	width:250px;
+	height:300px;
+	flex: 1 1 0;
+	text-align:center;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	max-width:400px;
+}
+
+.item > section > p {
+	flex-grow: 1;
+}
+ ul {
+	display: flex;
+	justify-content: space-between;
+ }
+.modal {
+	display:none;
+	position:fixed;
+	border-radius: 20px;
+	background-color: yellow;
+	border: 3px solid red;
+	font-size: 2em;
+	top: 50%;
+	left:50%;
+	width:400px;
+	height:300px;
 }
 
 // media querys
