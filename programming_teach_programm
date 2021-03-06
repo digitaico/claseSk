@@ -29,3 +29,20 @@
     - Tipos de datos
     - Estructuras de Datos
 - HandsOn web page ... from scratch
+
+
+[ COMANDOS TERMINAL ]
+
+- localserver
+python3 -m http.server
+
+- cambiar directorio
+cd 
+
+- lista archivos/folders en directorio
+ls
+
+- Saber en donde estoy
+pwd
+
+
